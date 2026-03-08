@@ -1,86 +1,98 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "The Seam Archives",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#8B5CF6",
+    "light": "#A78BFA",
+    "dark": "#6D28D9"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Anleitungen",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Erste Schritte",
+            "pages": ["guides/introduction"]
+          },
+          {
+            "group": "Kernsysteme",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "guides/currencies",
+              "guides/boons-and-blights",
+              "guides/reputation",
+              "guides/rifts-and-portals"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Weitere Systeme",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "guides/housing",
+              "guides/crafting",
+              "guides/contracts"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Lore",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Die Welt",
             "pages": [
-              "api-reference/introduction"
+              "lore/the-breach",
+              "lore/the-seam",
+              "lore/rifts",
+              "lore/guarma",
+              "lore/wayfarers"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Währungen",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "lore/breakdust",
+              "lore/seamshards"
+            ]
+          },
+          {
+            "group": "Dimensionen",
+            "pages": [
+              "lore/dimensions/frontier-prime",
+              "lore/dimensions/neon-arc",
+              "lore/dimensions/iron-eden",
+              "lore/dimensions/ash-courts",
+              "lore/dimensions/frostline",
+              "lore/dimensions/eternal-dusk"
+            ]
+          },
+          {
+            "group": "Kernfraktionen",
+            "pages": [
+              "lore/factions/the-concord",
+              "lore/factions/black-atlas",
+              "lore/factions/orison-circle",
+              "lore/factions/riftwardens",
+              "lore/factions/the-ledgerhouse"
+            ]
+          },
+          {
+            "group": "Dimensionsfraktionen",
+            "pages": [
+              "lore/factions/dustbound-union",
+              "lore/factions/neon-syndicate",
+              "lore/factions/forged-directorate",
+              "lore/factions/cinder-court",
+              "lore/factions/whitebound",
+              "lore/factions/umbral-choir"
             ]
           }
         ]
       }
     ],
     "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
+      "anchors": []
     }
   },
   "logo": {
@@ -88,35 +100,9 @@
     "dark": "/logo/dark.svg"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+    "links": []
   },
   "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+    "socials": {}
   }
 }

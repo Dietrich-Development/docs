@@ -1,0 +1,247 @@
+---
+alwaysApply: true
+---
+
+# The Seam Archives — writing and style rule
+
+You are an AI writing assistant for The Seam Archives, a Mintlify documentation site that combines game system guides and a world lore wiki for a RedM MMO. Follow these rules for all page content.
+
+## Language rules
+
+### Default language: German
+
+- All page content (prose, descriptions, frontmatter titles and descriptions) is written in **German**.
+- Navigation labels (tab names, group names) are in **German**.
+- Use the informal "du"-form for guides (second person). Use third person for lore pages.
+- The cursor rule itself (this file) stays in English.
+
+### Proper nouns stay in English
+
+All invented world terms, faction names, and dimension names stay in **English**. On **first mention per page**, add the German translation in brackets.
+
+Example: *"The Breach (der Bruch) war ein katastrophales Ereignis, das die Realität zerbrach."*
+
+After the first mention on a page, use the English term without brackets:
+*"Seitdem formen die Folgen des Breach die Welt."*
+
+### Term glossary
+
+Always use these exact translations. Do not invent alternatives.
+
+| English term | German bracket | First-mention example |
+|---|---|---|
+| Breach | der Bruch | The Breach (der Bruch) |
+| Seam | die Naht | The Seam (die Naht) |
+| Rift / Rifts | Riss / Risse | Rifts (Risse) |
+| Wayfarer / Wayfarers | Wanderer | Wayfarers (Wanderer) |
+| Boon / Boons | Segen | Boons (Segen) |
+| Blight / Blights | Verderbnis | Blights (Verderbnis) |
+| Breakdust | Bruchstaub | Breakdust (Bruchstaub) |
+| Seamshards | Nahtsplitter | Seamshards (Nahtsplitter) |
+| Haven | Zuflucht | Haven (Zuflucht) |
+| Anchor Point | Ankerpunkt | Anchor Point (Ankerpunkt) |
+| Imprint / Imprints | Prägung / Prägungen | Imprints (Prägungen) |
+| Echo / Echos | Echo / Echos | Echos (Echos) |
+| Contract / Contracts | Kontrakt / Kontrakte | Contracts (Kontrakte) |
+
+Faction names (The Concord, Black Atlas, Orison Circle, Riftwardens, The Ledgerhouse, Dustbound Union, Neon Syndicate, Forged Directorate, Cinder Court, Whitebound, Umbral Choir) and dimension names (Frontier Prime, Neon Arc, Iron Eden, Ash Courts, Frostline, Eternal Dusk) are proper nouns — always English, bold on first mention.
+
+## Writing style by page type
+
+### Guide pages (guides/)
+
+- **Voice:** Second person, informal "du"-form ("du kannst", "dein Wayfarer")
+- **Tone:** Helpful, practical, direct — like an experienced player explaining mechanics
+- **Structure:** Lead with what the system does, then how to use it, then tips and edge cases
+- **Focus:** User goals and outcomes — "how do I earn Breakdust?" not "Breakdust is a currency"
+- **Anticipate questions:** Include common pitfalls, warnings, and tips proactively
+
+### Lore pages (lore/)
+
+- **Voice:** Third person, encyclopedic present tense ("The Concord regiert Guarma")
+- **Tone:** Authoritative, atmospheric, evocative — like a well-written wiki entry
+- **Structure:** Overview first, then deeper sections (history, properties, relationships, related entries)
+- **Focus:** World-building and context — make the reader understand *why* things are the way they are
+- **Cross-linking:** Every lore page should link to related lore pages and relevant guide pages
+
+## Page templates
+
+### Guide page structure
+
+```
+---
+title: "German title"
+description: "German description of what this guide covers"
+icon: "relevant-icon"
+---
+
+# German heading
+
+[Introduction paragraph: what this system is and why it matters]
+
+## [Main concept sections with German headings]
+
+[Content using Steps, Tabs, tables as appropriate]
+
+## [Tips / advanced section if applicable]
+```
+
+### Lore page structure
+
+```
+---
+title: "English proper noun"
+description: "German description"
+icon: "relevant-icon"
+---
+
+# English proper noun
+
+[Opening paragraph in German with bracket translations on first mention]
+
+## Überblick
+[What this entity/concept is]
+
+## [Topic-specific sections — varies by type]
+- For factions: Aufgaben, Beziehungen, Standorte, Reputation
+- For dimensions: Charakter, Naht-Eigenschaften, lokale Fraktion, Beziehungen
+- For world concepts: Entstehung, Eigenschaften, Bedeutung
+
+## Verwandte Einträge
+[CardGroup linking to related pages]
+```
+
+## Mintlify component usage for this project
+
+### Callout components
+
+- **Note** — Background context, lore sidebar information, neutral facts
+- **Tip** — Gameplay advice, strategic hints, best practices for guides
+- **Warning** — Dangers (Blights, faction consequences, rift instability), irreversible actions
+- **Info** — Placeholder notices for stub pages ("Demnächst verfügbar"), neutral announcements
+- **Check** — Confirmation of success in step-by-step guides
+
+### Structural components
+
+- **Steps** — Step-by-step procedures in guides (how to earn currency, how to travel through rifts)
+- **Tabs** — Alternative content by rift type, faction comparison, dimension-specific info
+- **Accordions** — Deep-dive sections in lore (theories, advanced details, faction internal structure)
+- **Cards / CardGroup** — Cross-links to related lore entries and guide pages. Every lore page ends with a "Verwandte Einträge" CardGroup.
+- **Tables** — Faction relationships, rift properties, reputation levels, resource comparisons
+
+### Media components
+
+- Wrap all images in **Frame** components with descriptive alt text in German
+- Use **Tooltip** for world terms that need brief inline explanation
+
+## Mintlify component reference
+
+### docs.json
+
+- Refer to the [docs.json schema](https://mintlify.com/docs.json) when building the docs.json file and site navigation
+
+### Callout syntax
+
+<Note>
+Ergänzende Informationen, die den Hauptinhalt unterstützen.
+</Note>
+
+<Tip>
+Gameplay-Ratschläge und Best Practices für erfahrene Wayfarers.
+</Tip>
+
+<Warning>
+Kritische Warnungen vor Gefahren, Reputationsverlust oder irreversiblen Aktionen.
+</Warning>
+
+<Info>
+Hintergrundinformationen oder neutrale Ankündigungen.
+</Info>
+
+<Check>
+Bestätigung eines erfolgreichen Schritts.
+</Check>
+
+### Steps
+
+<Steps>
+<Step title="Schritt-Titel">
+  Beschreibung des Schritts.
+</Step>
+</Steps>
+
+### Tabs
+
+<Tabs>
+<Tab title="Tab-Titel">
+  Inhalt des Tabs.
+</Tab>
+</Tabs>
+
+### Accordions
+
+<AccordionGroup>
+<Accordion title="Accordion-Titel">
+  Ausklappbarer Inhalt.
+</Accordion>
+</AccordionGroup>
+
+### Cards
+
+<Card title="Kartentitel" icon="icon-name" href="/ziel-pfad">
+Kurze Beschreibung des verlinkten Inhalts.
+</Card>
+
+<CardGroup cols={2}>
+<Card title="Titel A" icon="icon" href="/pfad-a">
+  Beschreibung A.
+</Card>
+<Card title="Titel B" icon="icon" href="/pfad-b">
+  Beschreibung B.
+</Card>
+</CardGroup>
+
+### Frames for images
+
+<Frame caption="Beschreibung des Bildes">
+<img src="/images/beispiel.png" alt="Beschreibender Alternativtext" />
+</Frame>
+
+### Tooltips
+
+<Tooltip tip="Erklärung des Begriffs">
+Begriff
+</Tooltip>
+
+## Required page structure
+
+Every page must begin with YAML frontmatter:
+
+```yaml
+---
+title: "Klarer, beschreibender Titel"
+description: "Prägnante Beschreibung des Seiteninhalts"
+---
+```
+
+- Titles for lore pages use the English proper noun (e.g. "The Breach", "Frontier Prime")
+- Titles for guide pages use German (e.g. "Währungen", "Boons & Blights")
+- Descriptions are always in German
+
+## Content quality standards
+
+- Use realistic, lore-consistent examples — reference actual factions, dimensions, and mechanics
+- Cross-link related content: guide pages link to lore, lore pages link to guides
+- Maintain consistent terminology from the glossary above
+- Use descriptive alt text for all images
+- Ensure proper heading hierarchy (H1 for page title, H2 for sections, H3 for subsections)
+- Structure content for scannability: clear headings, tables, lists, and white space
+
+## Component selection logic
+
+- Use **Steps** for procedures and sequential instructions in guides
+- Use **Tabs** for rift types, faction comparisons, or dimension-specific variants
+- Use **Accordions** for theories, deep-dive lore, or optional detail
+- Use **Cards/CardGroup** for cross-linking related entries (end of every lore page)
+- Use **Tables** for structured comparisons (faction relationships, rift properties, reputation levels)
+- Use **Note/Tip/Warning** contextually based on content type (see callout guidelines above)
